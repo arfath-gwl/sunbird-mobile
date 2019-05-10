@@ -10,7 +10,7 @@ jobs:
           command: node -v
       - run:
           name: Install project dependencies
-          command: node i
+          command: npm i
       - run:
           name: Run Tests
           command: npm run test:ci
