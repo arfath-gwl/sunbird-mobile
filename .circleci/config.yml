@@ -2,10 +2,16 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: circleci/node
+      - image: circleci/node:chakracore-10.13.0
     steps:
       - checkout
-      - run: node -v
-      - run: npm install
-      - run: npm run test:ci
+      - run:
+          name: Check current version of node
+          command: node -v
+      - run:
+          name: Install project dependencies
+          command: node i
+      - run:
+          name: Run Tests
+          command: npm run test:ci
 
