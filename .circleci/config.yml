@@ -5,6 +5,7 @@ jobs:
       - image: circleci/node
     steps:
       - checkout
+      - run: node -v
       - run: npm install
       - run: npm run test:ci
 
