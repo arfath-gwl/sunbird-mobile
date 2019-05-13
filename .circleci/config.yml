@@ -22,6 +22,6 @@ jobs:
           name: Run Tests
           command: npm run test:ci
       - store_artifacts:
-          path: reports/junit/jest-test-results.xml
+          path: coverage
 
 
